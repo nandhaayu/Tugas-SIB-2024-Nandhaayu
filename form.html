@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas SIB 24 [Nandha]</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <form action="">
+                <div class="form-grub">
+                    <label for="nama">Nama</label> <br>
+                    <input class="inp-form" type="text" id="nama" name="nama" placeholder="Nama Lengkap">
+                </div>
+                <div class="form-grub">
+                    <label for="email">Email</label> <br>
+                    <input class="inp-form" type="email" id="email" name="email" placeholder="Email Aktif">
+                </div>
+                <div class="form-grub">
+                    <label for="nohp">No. HP</label> <br>
+                    <input class="inp-form" type="tel" id="nohp" name="nohp" pattern="[0-9]{10,14}" placeholder="No HP Aktif">
+                </div>
+                <div class="form-grub hig">
+                    <div class="form-title">
+                        <label for="jenisKelamin">Jenis Kelamin</label>
+                    </div>
+                        <input type="radio" id="laki-laki" name="jenisKelamin" value="laki-laki">
+                        <label for="laki-laki" id="laki-laki">Laki-Laki</label> <br>
+                        <input type="radio" id="perempuan" name="jenisKelamin" value="perempuan">
+                        <label for="perempuan" id="perempuan">perempuan</label>
+                </div>
+                <div class="form-grub">
+                    <label for="prodi">Prodi</label>
+                    <select class="inp-form" name="prodi" id="prodi">
+                        <option value="">Pilih Prodi</option>
+                        <option value="RPL">Rekayasa Perangkat Lunak</option>
+                        <option value="ABI">Administrasi Bisnis International</option>
+                        <option value="AKP">Akutansi Keuangan Publik</option>
+                    </select>
+                </div>
+                <div class="form-grub hig">
+                    <div class="form-title">
+                        <label for="">Hobi</label>
+                    </div>
+                    <input type="checkbox" id="Membaca" name="Membaca" value="Membaca">
+                    <label for="Membaca">Membaca</label> <br>
+                    <input type="checkbox" name="hobi" id="Menulis" value="Menulis">
+                    <label for="Menulis">Menulis</label> <br>
+                    <input type="checkbox" id="Menyanyi" name="hobi" value="Menyanyi">
+                    <label for="Menyanyi">Menyanyi</label><br>
+                    <input type="checkbox" id="Olahraga" name="Olahraga" value="Olahraga">
+                    <label for="Olahraga">Olahraga</label>
+                </div>
+                <div class="form-grub">
+                    <label for="alamat">Alamat</label><br>
+                    <textarea class="inp-form" name="alamat" id="alamat" cols="30" rows="4" placeholder="Alamat Lengkap"></textarea>
+                </div>
+                <div class="form-grub">
+                    <label for="foto">Foto Diri</label><br>
+                    <input class="inp-form" type="file" id="foto" name="foto">
+                </div>
+                <div class="form-grub">
+                    <a href="index.html" class="button">Kembali</a>
+                    <input class="submit" type="submit" name="submit" id="submit" onclick="alert('Hallo! Data Anda Akan Kami Proses ')">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -123,6 +123,29 @@ nav ul li {
     object-fit: cover;
     object-position: center;
 }
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    z-index: 2;
+}
+.carousel-button:hover {
+    background-color: rgb(15, 67, 92);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
 #about {
     margin-top: 50px;
 }

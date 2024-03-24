@@ -1,8 +1,4 @@
-// fetch('https://crudcrud.com/api/d75611714b5440cd97898e1e76e2ee6e/produk')
-// .then((response) => response.json())
-// .then((data) => console.log(data));
-
-let endpoint = 'https://crudcrud.com/api/b3d1ae54b0194e12aafec9ea8810d270/produk';
+let endpoint = 'https://crudcrud.com/api/231714e512ba4f829db022fd018d4760/produk';
 let konten = document.getElementById('konten');
 
 fetch(endpoint)

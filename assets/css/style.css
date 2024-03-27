@@ -79,7 +79,7 @@ nav {
     width: 100%;
     background-color: rgb(15, 67, 92);
     display: flex;
-    padding: 1px 60px;
+    padding: 1px 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -87,8 +87,7 @@ nav ul {
     display: flex;
     list-style-type: none;
     align-items: center;
-    margin-right: 100px;
-    padding-right: 100px;
+    margin-right: 50px;
 }
 nav ul li a {
     color: #fff;
@@ -102,6 +101,48 @@ nav ul li a:hover {
 nav ul li {
     padding: 5px 25px ;
 }
+.nav-toggle {
+    display: none; /* Menyembunyikan tombol toggle di tampilan desktop */
+}
+@media only screen and (max-width: 768px) {
+    nav {
+        padding: 1px;
+    }
+    nav img {
+        margin-left: 10px;
+    }
+    nav ul {
+        top: 0;
+        left: 0; /* Ubah left menjadi 0 */
+        width: 100%; /* Buat daftar menu penuh lebar */
+        background-color: rgb(15, 67, 92);
+        display: none; /* Sembunyikan daftar menu secara default */
+        flex-direction: column;
+        align-items: flex-start; /* Letakkan menu di sebelah kiri */
+        padding-top: 50px; /* Berikan padding atas untuk menghindari tumpang tindih dengan navigasi */
+    }
+    nav ul li {
+        padding: 20px 25px; /* Sesuaikan padding untuk penampilan yang lebih baik */
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    nav ul li a:hover {
+        opacity: 0.5;
+    }
+    .nav-toggle {
+        display: block;
+        color: #fff;
+        font-size: 1.5em;
+        cursor: pointer;
+        margin-left: 10px; /* Sesuaikan margin-left menjadi 10px */
+        margin-right: 10px; /* Sesuaikan margin-right menjadi 10px */
+    }
+}
+
 .banner {
     /* Menyesuaikan tampilan carousel */
     width: 100%; /* Mengisi lebar penuh */
@@ -146,40 +187,65 @@ nav ul li {
 .next {
     right: 0;
 }
+@media only screen and (max-width: 768px) {
+    .slide img {
+        max-height: 300px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+    }
+    .prev {
+        left: 0;
+        top: 40%;
+    }
+    
+    .next {
+        right: 0;
+        top: 40%;
+    }
+       
+}
 #about {
     margin-top: 50px;
+    padding: 0 20px; /* Padding untuk mempertahankan jarak konten dari sisi layar */
 }
+
 .title-me h1, p {
     text-align: center;
     color: rgb(15, 67, 92);
-    margin-bottom: 0;
+    margin-bottom: 20px; /* Menambahkan sedikit ruang antara judul dan paragraf */
 }
+
 .about-me {
     display: flex;
-    padding: 5px 100px;
-    margin-top: 70px;
+    flex-direction: column; /* Mengubah layout menjadi satu kolom di layar kecil */
+    align-items: center; /* Memusatkan konten pada layar kecil */
 }
+
 .about-me img {
     width: 100%;
-    height: 300px;
-    margin-top: 50px;
+    max-width: 300px; /* Mengatur lebar maksimum gambar */
+    height: auto; /* Menghindari distorsi gambar */
+    margin-top: 20px; /* Sedikit ruang atas untuk gambar */
 }
+
 .task {
-    padding-left: 155px;
+    padding: 20px; /* Memberikan ruang di sekitar konten */
+    margin-top: 20px; /* Jarak antara konten dan border */
 }
+
 .me {
-    text-align: center;
-    margin-right: 70px;
-    border: 5px solid rgb(15, 67, 92) ;
-    padding: 20px 60px;
+    margin-top: 20px; /* Jarak antara konten dan border */
+    padding: 20px;
+    border: 5px solid rgb(15, 67, 92);
+    margin-bottom: 20px; /* Jarak antara konten dan border */
 }
+
 .me p {
-    text-align: left;
+    text-align: justify; /* Mengatur paragraf menjadi rata kiri dan kanan */
 }
-.me ul li {
-    list-style-type: number;
-    text-align: left;
+
+.me ul {
+    padding-left: 20px; /* Menambahkan sedikit padding untuk ul */
 }
+
 #produk {
     margin-top: 50px;
 }
@@ -210,6 +276,13 @@ nav ul li {
     padding: 10px 20px;
     border-radius: 50px;
     color: rgb(27, 74, 95);
+    margin-left: 0;
+}
+.button-login {
+    background-color: rgb(17, 138, 194);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-left: 0;
 }
 /* Style untuk card */
 .card {
@@ -273,4 +346,75 @@ nav ul li {
   .card-button:hover {
     background-color: #0056b3;
   }
+
+  @media only screen and (max-width: 768px) {
+    .card {
+      margin-right: 10px; /* Jarak antara kartu */
+      margin-bottom: 10px;
+    }
+  }
   
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  @media screen and (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        margin: 50px auto;
+    }
+}
+  .login-form {
+    max-width: 400px;
+    padding: 10px 30px 25px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+  }
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  .login-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .login-form input[type="submit"]:hover {
+    background-color: #111;
+  }
+  .login-form p {
+    text-align: center;
+    margin-top: 25px;
+  }
+  .login-form a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .login-form a:hover {
+    color: #111;
+  }

@@ -10,23 +10,55 @@
 <body class="index">
     <div class="container-index">
         <nav>
-            <img src="assets/img/logo-1.png" alt="logo">
-            <ul>
+            <img src="assets/img/logo-1.png" alt="logo" id="logo">
+            <div class="nav-toggle" onclick="toggleMenu()">☰</div> <!-- Ubah ikon menjadi tiga garis -->
+            <ul id="nav-list">
                 <li><a href="#">Beranda</a></li>
                 <li><a href="#about">Tugas</a></li>
                 <li><a href="jsdasar.html">jsdasar</a></li>
                 <li><a href="landingdom.html">Landingdom</a></li>
                 <li><a href="productapi.html">Produk API</a></li>
+                <li><a href="login.html" class="button-login">Login</a></li>
                 <li><a href="form.html" class="button">Register Form</a></li>
             </ul>
         </nav>
         <div class="banner">
             <div class="slides">
-                <div class="slide"><img src="https://images.pexels.com/photos/6146970/pexels-photo-6146970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
-                <div class="slide"><img src="https://images.pexels.com/photos/6146978/pexels-photo-6146978.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
-                <div class="slide"><img src="https://images.pexels.com/photos/7972671/pexels-photo-7972671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                <div class="slide"><img src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                <div class="slide"><img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                <div class="slide"><img src="https://images.pexels.com/photos/6804610/pexels-photo-6804610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
             </div>
+            <button class="carousel-button prev" onclick="prevSlide()"><</button>
+            <button class="carousel-button next" onclick="nextSlide()">></button>
         </div>
+        <script>
+            let slideIndex = 0;
+
+            function nextSlide() {
+                slideIndex++;
+                showSlides();
+            }
+
+            function prevSlide() {
+                slideIndex--;
+                showSlides();
+            }
+
+            function showSlides() {
+                const slides = document.getElementsByClassName("slide");
+                if (slideIndex >= slides.length) {
+                    slideIndex = 0;
+                } else if (slideIndex < 0) {
+                    slideIndex = slides.length - 1;
+                }
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex].style.display = "block";
+            }
+
+            setInterval(nextSlide, 10000);
+        </script>
         <div id="about">
             <div class="title-me">
                 <h1>About Task</h1>
@@ -55,6 +87,6 @@
             <p>Nandha Ayu Ramadhani</p>
         </div>
     </div>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/js.js"></script>
 </body>
 </html>
